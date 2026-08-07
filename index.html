@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="description"
+      content="Trax — a Trello-inspired project management app for organizing workspaces, projects, boards, and tasks."
+    />
+    <title>Trax</title>
+    <script>
+      // Runs before React mounts to set data-theme synchronously, preventing
+      // a flash of the wrong theme. Must stay in vanilla JS (no module
+      // imports run this early) — keep THEME_STORAGE_KEY in sync with
+      // src/constants/theme.js.
+      (function () {
+        var THEME_STORAGE_KEY = "trax-theme-preference";
+        try {
+          var stored = localStorage.getItem(THEME_STORAGE_KEY);
+          var resolved =
+            stored === "light" || stored === "dark"
+              ? stored
+              : window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light";
+          document.documentElement.setAttribute("data-theme", resolved);
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

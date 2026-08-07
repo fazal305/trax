@@ -1,0 +1,73 @@
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  border: var(--border-width-thin) solid var(--color-border);
+  background: var(--color-surface);
+  transition: background var(--duration-fast) var(--ease-standard);
+}
+
+.row:hover {
+  background: var(--color-surface-hover);
+  text-decoration: none;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: var(--radius-md);
+  color: var(--color-text-on-brand);
+  font-weight: var(--font-weight-bold);
+  flex-shrink: 0;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.name {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.meta {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-tertiary);
+}
+
+.favoriteButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: var(--radius-full);
+  color: var(--color-text-tertiary);
+  flex-shrink: 0;
+}
+
+.favoriteButton:hover {
+  background: var(--color-surface-sunken);
+  color: var(--color-warning);
+}
+
+.favoriteButton[aria-pressed="true"] {
+  color: var(--color-warning);
+}
+
+.favoriteIcon {
+  width: 1rem;
+  height: 1rem;
+}

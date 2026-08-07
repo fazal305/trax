@@ -1,0 +1,90 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.preview {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.role {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  border: none;
+  padding: 0;
+}
+
+.label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+}
+
+.input {
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  border: var(--border-width-thin) solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.input:focus-visible {
+  border-color: var(--color-brand);
+}
+
+.swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.swatch {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: var(--radius-full);
+  border: var(--border-width-medium) solid transparent;
+  transition: border-color var(--duration-fast) var(--ease-standard);
+}
+
+.swatch[aria-pressed="true"] {
+  border-color: var(--color-text);
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-2);
+}
+
+.cancelButton,
+.saveButton {
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-medium);
+  transition: background var(--duration-fast) var(--ease-standard);
+}
+
+.cancelButton {
+  color: var(--color-text);
+  background: var(--color-surface-sunken);
+}
+.cancelButton:hover {
+  background: var(--color-surface-hover);
+}
+
+.saveButton {
+  color: var(--color-text-on-brand);
+  background: var(--color-brand);
+}
+.saveButton:hover {
+  background: var(--color-brand-hover);
+}

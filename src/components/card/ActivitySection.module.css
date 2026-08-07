@@ -1,0 +1,109 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.composer {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.composerInputArea {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  flex: 1;
+}
+
+.textarea {
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  border: var(--border-width-thin) solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  resize: vertical;
+}
+
+.textarea:focus-visible {
+  border-color: var(--color-brand);
+}
+
+.submitButton {
+  align-self: flex-start;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  background: var(--color-brand);
+  color: var(--color-text-on-brand);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.submitButton:hover {
+  background: var(--color-brand-hover);
+}
+
+.submitButton:disabled {
+  background: var(--color-border);
+}
+
+.feed {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.entry {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.systemIcon {
+  width: 1.75rem;
+  height: 1.75rem;
+  padding: var(--space-1);
+  border-radius: var(--radius-full);
+  background: var(--color-surface-sunken);
+  color: var(--color-text-tertiary);
+  flex-shrink: 0;
+}
+
+.entryBody {
+  flex: 1;
+  min-width: 0;
+}
+
+.entryHeader {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+}
+
+.actorName {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+}
+
+.timestamp {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-tertiary);
+}
+
+.commentText {
+  margin-top: var(--space-1);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-sunken);
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  overflow-wrap: break-word;
+}
+
+.systemText {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  padding-top: var(--space-1);
+}

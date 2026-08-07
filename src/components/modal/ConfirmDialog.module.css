@@ -1,0 +1,43 @@
+.description {
+  color: var(--color-text-secondary);
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-2);
+  margin-top: var(--space-5);
+}
+
+.cancelButton,
+.confirmButton,
+.dangerButton {
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-medium);
+  transition: background var(--duration-fast) var(--ease-standard);
+}
+
+.cancelButton {
+  color: var(--color-text);
+  background: var(--color-surface-sunken);
+}
+.cancelButton:hover {
+  background: var(--color-surface-hover);
+}
+
+.confirmButton {
+  color: var(--color-text-on-brand);
+  background: var(--color-brand);
+}
+.confirmButton:hover {
+  background: var(--color-brand-hover);
+}
+
+.dangerButton {
+  color: var(--color-neutral-0);
+  background: var(--color-danger);
+}
+.dangerButton:hover {
+  background: var(--color-danger-600);
+}

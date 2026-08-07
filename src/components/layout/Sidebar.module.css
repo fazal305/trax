@@ -1,0 +1,90 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: var(--sidebar-width);
+  height: 100vh;
+  padding: var(--space-4) var(--space-3);
+  background: var(--color-surface);
+  border-right: var(--border-width-thin) solid var(--color-border);
+  flex-shrink: 0;
+  transition: width var(--duration-base) var(--ease-standard);
+}
+
+.collapsed {
+  width: var(--sidebar-width-collapsed);
+}
+
+.drawer {
+  position: fixed;
+  inset-block: 0;
+  inset-inline-start: 0;
+  z-index: var(--z-modal);
+  width: var(--sidebar-width);
+  transform: translateX(-100%);
+  box-shadow: var(--shadow-xl);
+  transition: transform var(--duration-base) var(--ease-decelerate);
+}
+
+.drawerOpen {
+  transform: translateX(0);
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal-backdrop);
+  background: var(--color-backdrop);
+}
+
+.brandRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.logo {
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+.brandName {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+}
+
+.closeButton {
+  margin-inline-start: auto;
+  color: var(--color-text-secondary);
+  padding: var(--space-1);
+  border-radius: var(--radius-sm);
+}
+
+.closeButton:hover {
+  background: var(--color-surface-hover);
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  flex: 1;
+  overflow-y: auto;
+}
+
+.collapseButton {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2);
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.collapseButton:hover {
+  background: var(--color-surface-hover);
+  color: var(--color-text);
+}

@@ -1,0 +1,126 @@
+.column {
+  display: flex;
+  flex-direction: column;
+  width: var(--board-list-width);
+  max-height: 100%;
+  flex-shrink: 0;
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-overlay);
+  box-shadow: var(--shadow-sm);
+}
+
+.dragging {
+  opacity: 0.5;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-2) var(--space-2) var(--space-2) var(--space-1);
+}
+
+.dragHandle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.75rem;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-tertiary);
+  flex-shrink: 0;
+  cursor: grab;
+  touch-action: none;
+}
+
+.dragHandle svg {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.dragHandle:hover {
+  background: var(--color-surface-hover);
+}
+
+.dragHandle:active {
+  cursor: grabbing;
+}
+
+.collapseButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-tertiary);
+  flex-shrink: 0;
+}
+
+.collapseButton svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.collapseButton:hover {
+  background: var(--color-surface-hover);
+}
+
+.title {
+  flex: 1;
+  min-width: 0;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  flex: 1;
+  padding: 0 var(--space-2) var(--space-2);
+  overflow-y: auto;
+}
+
+.collapsedColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  width: 2.5rem;
+  flex-shrink: 0;
+  padding: var(--space-2);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-overlay);
+  box-shadow: var(--shadow-sm);
+}
+
+.expandButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-tertiary);
+}
+
+.expandButton svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.expandButton:hover {
+  background: var(--color-surface-hover);
+}
+
+.collapsedName {
+  writing-mode: vertical-rl;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 16rem;
+}

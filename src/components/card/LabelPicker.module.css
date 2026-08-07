@@ -1,0 +1,101 @@
+.container {
+  position: relative;
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  border: var(--border-width-thin) solid var(--color-border);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.trigger svg {
+  width: 0.9375rem;
+  height: 0.9375rem;
+}
+
+.trigger:hover {
+  background: var(--color-surface-hover);
+}
+
+.menu {
+  position: absolute;
+  top: calc(100% + var(--space-1));
+  left: 0;
+  z-index: var(--z-dropdown);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 14rem;
+  padding: var(--space-2);
+  border-radius: var(--radius-md);
+  border: var(--border-width-thin) solid var(--color-border);
+  background: var(--color-surface-overlay);
+  box-shadow: var(--shadow-lg);
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2);
+  border-radius: var(--radius-sm);
+  text-align: left;
+}
+
+.option:hover {
+  background: var(--color-surface-hover);
+}
+
+.swatch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.5rem;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+.check {
+  width: 0.875rem;
+  height: 0.875rem;
+  color: var(--color-neutral-0);
+}
+
+.name {
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+}
+
+.empty {
+  padding: var(--space-2);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
+}
+
+.manageButton {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2);
+  margin-top: var(--space-1);
+  padding-top: var(--space-2);
+  border-top: var(--border-width-thin) solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.manageButton svg {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.manageButton:hover {
+  background: var(--color-surface-hover);
+}

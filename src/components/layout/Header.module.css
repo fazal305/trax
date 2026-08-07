@@ -1,0 +1,127 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  height: var(--header-height);
+  padding-inline: var(--space-4);
+  background: var(--color-surface);
+  border-bottom: var(--border-width-thin) solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+}
+
+.mobileNavButton {
+  display: none;
+  color: var(--color-text-secondary);
+  padding: var(--space-2);
+  border-radius: var(--radius-md);
+}
+
+.mobileNavButton:hover {
+  background: var(--color-surface-hover);
+}
+
+.searchTrigger {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex: 1;
+  max-width: 28rem;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-sunken);
+  border: var(--border-width-thin) solid var(--color-border);
+  color: var(--color-text-tertiary);
+  text-align: left;
+  transition: border-color var(--duration-fast) var(--ease-standard);
+}
+
+.searchTrigger:hover {
+  border-color: var(--color-border-strong);
+}
+
+.searchIcon {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+
+.searchPlaceholder {
+  flex: 1;
+  font-size: var(--font-size-sm);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.shortcutHint {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-xs);
+  padding: 0.0625rem var(--space-1);
+  border-radius: var(--radius-xs);
+  border: var(--border-width-thin) solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  margin-inline-start: auto;
+}
+
+.iconButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+  transition: background var(--duration-fast) var(--ease-standard);
+}
+
+.iconButton svg {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.iconButton:hover {
+  background: var(--color-surface-hover);
+  color: var(--color-text);
+}
+
+.avatarButton {
+  margin-inline-start: var(--space-1);
+  border-radius: var(--radius-full);
+}
+
+.avatar {
+  border-radius: var(--radius-full);
+  border: var(--border-width-thin) solid var(--color-border);
+}
+
+@media (max-width: 768px) {
+  .mobileNavButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .searchPlaceholder {
+    display: none;
+  }
+
+  .shortcutHint {
+    display: none;
+  }
+
+  .searchTrigger {
+    max-width: none;
+    flex: initial;
+    width: 2.25rem;
+    justify-content: center;
+    padding: var(--space-2);
+  }
+}

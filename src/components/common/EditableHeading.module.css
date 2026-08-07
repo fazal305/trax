@@ -1,0 +1,24 @@
+.button {
+  font: inherit;
+  color: inherit;
+  cursor: text;
+  width: fit-content;
+  border-radius: var(--radius-sm);
+  padding: 0 var(--space-1);
+  margin-inline-start: calc(var(--space-1) * -1);
+}
+
+.button:hover {
+  background: var(--color-surface-hover);
+}
+
+.input {
+  font: inherit;
+  color: var(--color-text);
+  padding: 0 var(--space-1);
+  margin-inline-start: calc(var(--space-1) * -1);
+  border-radius: var(--radius-sm);
+  border: var(--border-width-thin) solid var(--color-brand);
+  background: var(--color-surface);
+  width: 100%;
+}

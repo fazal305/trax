@@ -1,0 +1,124 @@
+.container {
+  position: relative;
+  margin-bottom: var(--space-4);
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  width: 100%;
+  padding: var(--space-2);
+  border-radius: var(--radius-md);
+  border: var(--border-width-thin) solid var(--color-border);
+  text-align: left;
+  transition: background var(--duration-fast) var(--ease-standard);
+}
+
+.trigger:hover {
+  background: var(--color-surface-hover);
+}
+
+.avatar,
+.optionAvatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-on-brand);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  flex-shrink: 0;
+}
+
+.name {
+  flex: 1;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.chevron {
+  width: 1rem;
+  height: 1rem;
+  color: var(--color-text-tertiary);
+  flex-shrink: 0;
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + var(--space-1));
+  left: 0;
+  right: 0;
+  z-index: var(--z-dropdown);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-2);
+  border-radius: var(--radius-md);
+  border: var(--border-width-thin) solid var(--color-border);
+  background: var(--color-surface-overlay);
+  box-shadow: var(--shadow-lg);
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2);
+  border-radius: var(--radius-sm);
+  text-align: left;
+  transition: background var(--duration-fast) var(--ease-standard);
+}
+
+.option:hover {
+  background: var(--color-surface-hover);
+}
+
+.optionActive {
+  background: var(--color-brand-subtle);
+}
+
+.optionName {
+  flex: 1;
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.favoriteIcon {
+  width: 0.875rem;
+  height: 0.875rem;
+  color: var(--color-warning);
+  flex-shrink: 0;
+}
+
+.createButton {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2);
+  border-radius: var(--radius-sm);
+  border-top: var(--border-width-thin) solid var(--color-border);
+  margin-top: var(--space-1);
+  padding-top: var(--space-3);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-brand);
+}
+
+.createButton:hover {
+  background: var(--color-brand-subtle);
+}
+
+.createIcon {
+  width: 1rem;
+  height: 1rem;
+}

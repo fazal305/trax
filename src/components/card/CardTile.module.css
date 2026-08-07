@@ -1,0 +1,95 @@
+.tile {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  border: var(--border-width-thin) solid var(--color-border);
+  text-align: left;
+  transition:
+    background var(--duration-fast) var(--ease-standard),
+    box-shadow var(--duration-fast) var(--ease-standard);
+}
+
+.tile:hover {
+  background: var(--color-surface-hover);
+  box-shadow: var(--shadow-sm);
+}
+
+.cover {
+  display: block;
+  height: 0.5rem;
+  margin: calc(var(--space-2) * -1) calc(var(--space-3) * -1) 0;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.labels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+
+.label {
+  padding: 0.0625rem var(--space-2);
+  border-radius: var(--radius-full);
+  font-size: 0.6875rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-neutral-0);
+}
+
+.title {
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.badges {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.priorityDot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 0.1875rem;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-tertiary);
+}
+
+.badge svg {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.overdue {
+  color: var(--color-danger);
+}
+
+.members {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.members > * + * {
+  margin-left: -0.375rem;
+}

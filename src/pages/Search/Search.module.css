@@ -1,0 +1,72 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  max-width: 40rem;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-md);
+  color: var(--color-text-secondary);
+}
+
+.sectionTitle svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.recentHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.clearButton {
+  font-size: var(--font-size-sm);
+  color: var(--color-danger);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+}
+
+.clearButton:hover {
+  background: var(--color-danger-subtle);
+}
+
+.recentChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.recentChip {
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  background: var(--color-surface-sunken);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.recentChip:hover {
+  background: var(--color-surface-hover);
+  color: var(--color-text);
+}
+
+.emptyText {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
+}

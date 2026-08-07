@@ -1,0 +1,5 @@
+.avatar {
+  border-radius: var(--radius-full);
+  border: var(--border-width-medium) solid var(--color-border);
+  flex-shrink: 0;
+}

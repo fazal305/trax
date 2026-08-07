@@ -1,0 +1,66 @@
+.container {
+  position: relative;
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-secondary);
+  flex-shrink: 0;
+}
+
+.trigger svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.trigger:hover {
+  background: var(--color-surface-hover);
+}
+
+.menu {
+  position: absolute;
+  top: calc(100% + var(--space-1));
+  right: 0;
+  z-index: var(--z-dropdown);
+  display: flex;
+  flex-direction: column;
+  min-width: 10rem;
+  padding: var(--space-1);
+  border-radius: var(--radius-md);
+  border: var(--border-width-thin) solid var(--color-border);
+  background: var(--color-surface-overlay);
+  box-shadow: var(--shadow-lg);
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  text-align: left;
+}
+
+.menuItem svg {
+  width: 0.9375rem;
+  height: 0.9375rem;
+}
+
+.menuItem:hover {
+  background: var(--color-surface-hover);
+}
+
+.danger {
+  color: var(--color-danger);
+}
+
+.danger:hover {
+  background: var(--color-danger-subtle);
+}

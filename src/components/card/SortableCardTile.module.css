@@ -1,0 +1,7 @@
+.wrapper {
+  touch-action: manipulation;
+}
+
+.dragging {
+  opacity: 0.4;
+}

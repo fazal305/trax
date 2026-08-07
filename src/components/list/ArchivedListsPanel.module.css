@@ -1,0 +1,51 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2);
+  border-radius: var(--radius-md);
+}
+
+.row:hover {
+  background: var(--color-surface-hover);
+}
+
+.name {
+  flex: 1;
+  min-width: 0;
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.iconButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: var(--radius-full);
+  color: var(--color-text-secondary);
+  flex-shrink: 0;
+}
+
+.iconButton svg {
+  width: 0.9375rem;
+  height: 0.9375rem;
+}
+
+.iconButton:hover {
+  background: var(--color-surface-sunken);
+}
+
+.danger:hover {
+  color: var(--color-danger);
+  background: var(--color-danger-subtle);
+}
