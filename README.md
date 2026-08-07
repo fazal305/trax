@@ -5,7 +5,6 @@ A Trello-inspired project management application built with React — workspaces
 This is a portfolio project built to demonstrate professional React architecture: scalable state management with the Context API and `useReducer`, a token-driven design system with zero hardcoded styling values, reusable component composition, accessibility, and performance-conscious rendering.
 
 > **Live demo:** [fazal305.github.io/trax](https://fazal305.github.io/trax/)
-> **Screenshots:** add screenshots/GIFs of the Dashboard, a Board with cards open, and the dark theme here before sharing.
 
 ## Table of contents
 
