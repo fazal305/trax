@@ -4,7 +4,7 @@ A Trello-inspired project management application built with React — workspaces
 
 This is a portfolio project built to demonstrate professional React architecture: scalable state management with the Context API and `useReducer`, a token-driven design system with zero hardcoded styling values, reusable component composition, accessibility, and performance-conscious rendering.
 
-> **Live demo:** deploy with `npm run deploy` (see [Deployment](#deployment)) and add the resulting URL here.
+> **Live demo:** [fazal305.github.io/trax](https://fazal305.github.io/trax/)
 > **Screenshots:** add screenshots/GIFs of the Dashboard, a Board with cards open, and the dark theme here before sharing.
 
 ## Table of contents
@@ -176,11 +176,15 @@ State is deliberately split into five independent domains, each with its own Con
 
 ### GitHub Pages
 
+Live at **[fazal305.github.io/trax](https://fazal305.github.io/trax/)**, served from the `gh-pages` branch.
+
+To redeploy after changes:
+
 ```bash
 npm run deploy
 ```
 
-This builds the app and publishes `dist/` to a `gh-pages` branch via the `gh-pages` package. Then, in the repo's **Settings → Pages**, set the source to the `gh-pages` branch. The app will be served at `https://fazal305.github.io/trax/` — note `vite.config.js`'s `base: '/trax/'` must match the repo name exactly, or assets will 404.
+This builds the app and publishes `dist/` to the `gh-pages` branch via the `gh-pages` package — GitHub Pages picks up the update automatically (Settings → Pages is already configured to build from that branch). Note `vite.config.js`'s `base: '/trax/'` must match the repo name exactly, or assets will 404.
 
 Because this is a fully static SPA using `HashRouter`, no server-side rewrite rules are needed for client-side routes to work on refresh.
 
