@@ -5,6 +5,7 @@ import { AppShell } from "./components/layout/AppShell";
 import { ErrorBoundary } from "./components/common/ErrorBoundary";
 import { LoadingOverlay } from "./components/common/LoadingOverlay";
 import { NotFound } from "./components/common/NotFound";
+import { ToastViewport } from "./components/common/ToastViewport";
 import { ROUTE_PATTERNS } from "./constants/routes";
 
 // Route-level code splitting: each page ships as its own chunk, fetched only
@@ -21,6 +22,7 @@ const Help = lazy(() => import("./pages/Help"));
 function App() {
   return (
     <AppProviders>
+      <ToastViewport />
       <HashRouter>
         <ErrorBoundary>
           <Routes>

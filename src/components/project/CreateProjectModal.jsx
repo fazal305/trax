@@ -1,11 +1,13 @@
 import { useState, useRef } from "react";
 import { Modal } from "../modal/Modal";
 import { useData } from "../../contexts/DataContext";
+import { useToast } from "../../contexts/ToastContext";
 import { LABEL_COLORS } from "../../constants/labelColors";
 import styles from "./CreateProjectModal.module.css";
 
 export function CreateProjectModal({ isOpen, onClose, workspaceId, onCreated }) {
   const { createProject } = useData();
+  const { showToast } = useToast();
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [colorId, setColorId] = useState(LABEL_COLORS[0].id);
@@ -26,6 +28,7 @@ export function CreateProjectModal({ isOpen, onClose, workspaceId, onCreated }) 
     const id = createProject(workspaceId, trimmed, { description: description.trim(), color });
     onCreated(id);
     handleClose();
+    showToast(`Project "${trimmed}" created.`);
   }
 
   return (

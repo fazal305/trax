@@ -30,6 +30,11 @@
   border-color: var(--color-brand);
 }
 
+.error {
+  font-size: var(--font-size-xs);
+  color: var(--color-danger-500);
+}
+
 .swatches {
   display: flex;
   flex-wrap: wrap;

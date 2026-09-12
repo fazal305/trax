@@ -1,29 +1,37 @@
 import { useState, useRef } from "react";
 import { Modal } from "../modal/Modal";
 import { useData } from "../../contexts/DataContext";
+import { useToast } from "../../contexts/ToastContext";
 import { LABEL_COLORS } from "../../constants/labelColors";
 import styles from "./CreateWorkspaceModal.module.css";
 
 export function CreateWorkspaceModal({ isOpen, onClose, onCreated }) {
   const { createWorkspace } = useData();
+  const { showToast } = useToast();
   const [name, setName] = useState("");
   const [colorId, setColorId] = useState(LABEL_COLORS[0].id);
+  const [error, setError] = useState("");
   const nameInputRef = useRef(null);
 
   function handleClose() {
     setName("");
     setColorId(LABEL_COLORS[0].id);
+    setError("");
     onClose();
   }
 
   function handleSubmit(event) {
     event.preventDefault();
     const trimmed = name.trim();
-    if (!trimmed) return;
+    if (!trimmed) {
+      setError("Workspace name is required.");
+      return;
+    }
     const color = LABEL_COLORS.find((c) => c.id === colorId).value;
     const id = createWorkspace(trimmed, { color });
     onCreated(id);
     handleClose();
+    showToast(`Workspace "${trimmed}" created.`);
   }
 
   return (
@@ -41,10 +49,15 @@ export function CreateWorkspaceModal({ isOpen, onClose, onCreated }) {
             ref={nameInputRef}
             className={styles.input}
             value={name}
-            onChange={(event) => setName(event.target.value)}
+            onChange={(event) => {
+              setName(event.target.value);
+              if (error) setError("");
+            }}
             placeholder="e.g. Marketing Team"
             required
+            aria-invalid={Boolean(error)}
           />
+          {error && <span className={styles.error}>{error}</span>}
         </label>
 
         <fieldset className={styles.field}>

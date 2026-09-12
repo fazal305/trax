@@ -2,11 +2,13 @@ import { useState, useRef } from "react";
 import { Lock, Users } from "lucide-react";
 import { Modal } from "../modal/Modal";
 import { useData } from "../../contexts/DataContext";
+import { useToast } from "../../contexts/ToastContext";
 import { LABEL_COLORS } from "../../constants/labelColors";
 import styles from "./CreateBoardModal.module.css";
 
 export function CreateBoardModal({ isOpen, onClose, projectId, onCreated }) {
   const { createBoard } = useData();
+  const { showToast } = useToast();
   const [name, setName] = useState("");
   const [colorId, setColorId] = useState(LABEL_COLORS[0].id);
   const [visibility, setVisibility] = useState("private");
@@ -27,6 +29,7 @@ export function CreateBoardModal({ isOpen, onClose, projectId, onCreated }) {
     const id = createBoard(projectId, trimmed, { background, visibility });
     onCreated(id);
     handleClose();
+    showToast(`Board "${trimmed}" created.`);
   }
 
   return (
